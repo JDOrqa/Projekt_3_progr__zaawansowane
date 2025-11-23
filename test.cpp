@@ -9,3 +9,10 @@ TEST(MergeSortTests, AlreadySorted) {
     sorter.sort(arr);
     EXPECT_EQ(arr, (std::vector<int>{1, 2, 3, 4, 5}));
 }
+
+TEST(MergeSortTests, ReverseOrder) {
+    MergeSort<int> sorter;
+    std::vector<int> arr = { 5, 4, 3, 2, 1 };
+    sorter.sort(arr);
+    EXPECT_EQ(arr, (std::vector<int>{1, 2, 3, 4, 5}));
+}
