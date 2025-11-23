@@ -16,3 +16,10 @@ TEST(MergeSortTests, ReverseOrder) {
     sorter.sort(arr);
     EXPECT_EQ(arr, (std::vector<int>{1, 2, 3, 4, 5}));
 }
+
+TEST(MergeSortTests, RandomValues) {
+    MergeSort<int> sorter;
+    std::vector<int> arr = { 10, 1, 7, 3, 2 };
+    sorter.sort(arr);
+    EXPECT_EQ(arr, (std::vector<int>{1, 2, 3, 7, 10}));
+}
