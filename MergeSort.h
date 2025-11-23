@@ -25,4 +25,26 @@ private:
 
         merge(arr, left, mid, right);
     }
+void merge(std::vector<T>& arr, int left, int mid, int right)
+    {
+        std::vector<T> temp;
+        temp.reserve(right - left + 1);  // Rezerwacja pamięci
+        int i = left;
+        int j = mid + 1;
+
+        while (i <= mid && j <= right)
+        {
+            if (arr[i] <= arr[j])
+                temp.push_back(arr[i++]);
+            else
+                temp.push_back(arr[j++]);
+        }
+
+        while (i <= mid) temp.push_back(arr[i++]);
+        while (j <= right) temp.push_back(arr[j++]);
+
+        for (int k = 0; k < temp.size(); k++)
+            arr[left + k] = temp[k];
+    }
+};
 #endif
