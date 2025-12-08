@@ -4,7 +4,6 @@
 
 int main()
 {
-    // Instancja dla int
     MergeSort<int> sorterInt;
     std::vector<int> arrInt = { 5, 1, 9, 2, 3, -4, 7, 0 };
 
@@ -18,7 +17,6 @@ int main()
     for (auto x : arrInt) std::cout << x << " ";
     std::cout << std::endl;
 
-     // Instancja dla double
     MergeSort<double> sorterDouble;
     std::vector<double> arrDouble = { 5.5, 1.1, -3.3, 9.9, 0.5, -2.7 };
 
